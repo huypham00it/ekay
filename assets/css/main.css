@@ -2340,7 +2340,7 @@ header {
 }
 .home .registration {
   padding: 60px 0;
-  background-color: #2E547E;
+  background-color: #2e547e;
 }
 @media (max-width: 575.98px) {
   .home .registration {
@@ -2374,6 +2374,96 @@ header {
 @media (max-width: 575.98px) {
   .home .registration-buttons {
     --grid-gutter-y: 8px;
+  }
+}
+.home .jobs-flow {
+  padding: 36px 0;
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow {
+    padding: 26px 0;
+  }
+}
+.home .jobs-flow__steps {
+  position: relative;
+}
+.home .jobs-flow__steps::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  height: calc(100% - 52px);
+  width: 1px;
+  background-color: var(--primary-1-color);
+  left: 45px;
+  z-index: -1;
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow__steps::after {
+    left: 25px;
+  }
+}
+.home .jobs-flow__heading {
+  font-size: 2rem;
+  margin-bottom: 17px;
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow__heading {
+    font-size: 1.6rem;
+    margin-bottom: 13px;
+  }
+}
+.home .jobs-flow__steps-item {
+  display: flex;
+  gap: 26px;
+  padding: 20px;
+  background-color: var(--white-color);
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow__steps-item {
+    background-color: transparent;
+    padding: 0;
+    gap: 12px;
+  }
+}
+.home .jobs-flow__steps-item + .jobs-flow__steps-item {
+  margin-top: 15px;
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow__steps-item + .jobs-flow__steps-item {
+    margin-top: 26px;
+  }
+}
+.home .jobs-flow .step-icon {
+  background-color: var(--primary-1-color);
+  color: var(--white-color);
+  padding: 7px;
+  text-align: center;
+  width: 52px;
+  flex: none;
+  text-transform: uppercase;
+  height: fit-content;
+}
+.home .jobs-flow .step-icon .label {
+  font-size: 1rem;
+  line-height: 1;
+}
+.home .jobs-flow .step-icon .number {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+.home .jobs-flow .step-content h4 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow .step-content h4 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .home .jobs-flow .step-content p {
+    font-size: 1.2rem;
   }
 }
 

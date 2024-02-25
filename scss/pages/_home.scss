@@ -487,7 +487,7 @@
         padding: 20px;
         align-items: center;
         gap: 48px;
-        
+
         .job-info {
           display: flex;
           flex-wrap: wrap;
@@ -577,7 +577,6 @@
         .label {
           text-wrap: nowrap;
         }
-  
       }
 
       .description {
@@ -619,7 +618,7 @@
       font-size: 1.6rem;
 
       &.active {
-        background-color: var(--primary-4-color);  
+        background-color: var(--primary-4-color);
       }
     }
 
@@ -630,7 +629,7 @@
     }
 
     .collapse-icon {
-      transition: rotate linear .2s;
+      transition: rotate linear 0.2s;
     }
 
     .label.active .collapse-icon {
@@ -659,7 +658,7 @@
   // Registration
   .registration {
     padding: 60px 0;
-    background-color: #2E547E;
+    background-color: #2e547e;
 
     @include abstracts.screen(sm) {
       padding: 25px 0;
@@ -696,6 +695,103 @@
         --grid-gutter-y: 8px;
       }
     }
+  }
 
+  // Jobs flow
+  .jobs-flow {
+    padding: 36px 0;
+
+    @include abstracts.screen(sm) {
+     padding: 26px 0;
+    }
+
+    &__steps {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        height:  calc(100% - 52px);
+        width: 1px;
+        background-color: var(--primary-1-color);
+        left: 45px;
+        z-index: -1;
+
+        @include abstracts.screen(sm) {
+          left: 25px;
+         }
+      }
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 17px;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.6rem;
+        margin-bottom: 13px;
+      }
+    }
+
+    &__steps-item {
+      display: flex;
+      gap: 26px;
+      padding: 20px;
+      background-color: var(--white-color);
+
+      @include abstracts.screen(sm) {
+        background-color: transparent;
+        padding: 0;
+        gap: 12px;
+      }
+    }
+
+    &__steps-item + .jobs-flow__steps-item {
+      margin-top: 15px;
+
+      @include abstracts.screen(sm) {
+        margin-top: 26px;
+      }
+    }
+
+    .step-icon {
+      background-color: var(--primary-1-color);
+      color: var(--white-color);
+      padding: 7px;
+      text-align: center;
+      width: 52px;
+      flex: none;
+      text-transform: uppercase;
+      height: fit-content;
+
+      .label {
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      .number {
+        font-size: 2.6rem;
+        line-height: 1;
+      }
+    }
+
+    .step-content {
+      h4 {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+
+        @include abstracts.screen(sm) {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        @include abstracts.screen(sm) {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
