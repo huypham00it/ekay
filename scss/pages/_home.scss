@@ -297,7 +297,11 @@
   // Services
   .services {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 40px;
+
+    @include abstracts.screen(sm) {
+      padding-bottom: 24px;
+    }
   }
 
   .services__heading {
@@ -497,14 +501,88 @@
         .title {
           color: var(--primary-color);
           font-size: 1.5rem;
+
+          @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+          }
         }
 
         .salary {
           font-size: 1.3rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+
+          @include abstracts.screen(sm) {
+            font-size: 1.2rem;
+          }
         }
 
         .arrow {
           margin-left: auto;
+        }
+      }
+    }
+  }
+
+  //Search criteria
+  .search-criteria {
+    &__groups {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &-item {
+        padding: 0 26px;
+        background-color: var(--white-color);
+        border-radius: 4px;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.17);
+
+        @include abstracts.screen(sm) {
+          padding: 0 16px;
+        }
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+
+        @include abstracts.screen(sm) {
+          padding: 16px 0;
+        }
+      }
+
+      li + li {
+        border-top: 1px solid var(--border-color);
+      }
+
+      img {
+        width: 20px;
+      }
+
+      .index {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+        margin-right: 40px;
+
+        @include abstracts.screen(sm) {
+          flex-direction: column;
+          gap: 4px;
+          margin-right: 16px;
+          font-size: 1rem;
+        }
+
+        .label {
+          text-wrap: nowrap;
+        }
+  
+      }
+
+      .description {
+        @include abstracts.screen(sm) {
+          font-size: 1.2rem;
         }
       }
     }

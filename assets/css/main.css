@@ -2020,7 +2020,12 @@ header {
 }
 .home .services {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 40px;
+}
+@media (max-width: 575.98px) {
+  .home .services {
+    padding-bottom: 24px;
+  }
 }
 .home .services__heading {
   display: flex;
@@ -2199,11 +2204,78 @@ header {
   color: var(--primary-color);
   font-size: 1.5rem;
 }
+@media (max-width: 575.98px) {
+  .home .recent-jobs__items-link .title {
+    font-size: 1.4rem;
+  }
+}
 .home .recent-jobs__items-link .salary {
   font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+@media (max-width: 575.98px) {
+  .home .recent-jobs__items-link .salary {
+    font-size: 1.2rem;
+  }
 }
 .home .recent-jobs__items-link .arrow {
   margin-left: auto;
+}
+.home .search-criteria__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .search-criteria__groups-item {
+  padding: 0 26px;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.17);
+}
+@media (max-width: 575.98px) {
+  .home .search-criteria__groups-item {
+    padding: 0 16px;
+  }
+}
+.home .search-criteria__groups li {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+@media (max-width: 575.98px) {
+  .home .search-criteria__groups li {
+    padding: 16px 0;
+  }
+}
+.home .search-criteria__groups li + li {
+  border-top: 1px solid var(--border-color);
+}
+.home .search-criteria__groups img {
+  width: 20px;
+}
+.home .search-criteria__groups .index {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-right: 40px;
+}
+@media (max-width: 575.98px) {
+  .home .search-criteria__groups .index {
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 16px;
+    font-size: 1rem;
+  }
+}
+.home .search-criteria__groups .index .label {
+  text-wrap: nowrap;
+}
+@media (max-width: 575.98px) {
+  .home .search-criteria__groups .description {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
