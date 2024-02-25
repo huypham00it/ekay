@@ -135,3 +135,18 @@ function initTabs(){
       };
     });
 }
+
+
+/**
+ * Function to toggle collapse
+ */
+window.addEventListener("template-loaded", initCollapsible);
+function initCollapsible(){
+    const arcordions = $$(".toggle-collapse")
+
+    arcordions.forEach((arc) => {
+        arc.onclick = function(){
+            this.classList.toggle("active")
+        }
+    })
+}

@@ -587,4 +587,72 @@
       }
     }
   }
+
+  //Job references
+  .jobs-references {
+    padding: 40px 0px;
+    background-color: var(--white-color);
+
+    &-wrapper {
+      --grid-gutter-x: 20px;
+
+      @include abstracts.screen(md) {
+        --grid-gutter-y: 25px;
+      }
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 16px;
+
+      @include abstracts.screen(md) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .label {
+      padding: 12px 20px;
+      background-color: var(--primary-3-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.6rem;
+
+      &.active {
+        background-color: var(--primary-4-color);  
+      }
+    }
+
+    .label.active + .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .collapse-icon {
+      transition: rotate linear .2s;
+    }
+
+    .label.active .collapse-icon {
+      rotate: 180deg;
+    }
+
+    .content {
+      background-color: var(--primary-4-color);
+      border-top: 1px solid var(--white-color);
+      padding: 12px 20px;
+      font-size: 1.3rem;
+      display: none;
+
+      &-item {
+        .text {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .content + .label {
+      margin-top: 1px;
+    }
+  }
 }
