@@ -1355,6 +1355,8 @@ html {
   --dark-3-color: #6f6f6f;
   --body-bg: #eff4f8;
   --secondary-color: #FF3C3C;
+  --grey-1-color: #F5F5F5;
+  --border-color: #DBDBDB;
   --header-noti-bg: rgba(42,85,131, .8);
   --header-bg: var(--white-color);
   --mobile-menu-bg: #2e547e;
@@ -1732,7 +1734,7 @@ header {
 
 .home .banner {
   padding: 64px 0 24px;
-  background: url(../../assets/img/home-banner-bg.png);
+  background: url(../../assets/img/home-banner-bg.png) var(--white-color);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1783,7 +1785,7 @@ header {
   font-size: 2.8rem;
   color: var(--primary-color);
   font-weight: 600;
-  text-shadow: #F4FDFF 1px 0 10px;
+  text-shadow: #f4fdff 1px 0 10px;
   position: relative;
   z-index: 2;
 }
@@ -1826,6 +1828,169 @@ header {
 @media (max-width: 575.98px) {
   .home-sub-heading span {
     font-size: 2.4rem;
+  }
+}
+.home .job-filter {
+  padding-top: 24px;
+  padding-bottom: 30px;
+  background-color: var(--white-color);
+}
+.home .job-filter__heading {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+.home .job-filter__heading img {
+  width: 20px;
+}
+.home .job-filter .tabs-wrapper {
+  border-bottom: 1px solid var(--border-color);
+}
+.home .job-filter .tabs {
+  --grid-gutter-x: 5px;
+  position: relative;
+  margin: 0 auto;
+}
+@media (max-width: 575.98px) {
+  .home .job-filter .tabs {
+    --grid-gutter-x: 2px;
+  }
+}
+.home .job-filter .tabs::after {
+  content: "";
+  position: absolute;
+  left: var(--line-tab-offset, 0);
+  bottom: 0;
+  width: var(--line-tab-width, 0);
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+.home .job-filter .tab-item {
+  text-align: center;
+  font-size: 1.6rem;
+}
+@media (max-width: 575.98px) {
+  .home .job-filter .tab-item {
+    font-size: 1.4rem;
+  }
+}
+.home .job-filter .tab-item span {
+  display: block;
+  padding: 14px;
+  background-color: var(--grey-1-color);
+  transition: all 0.2s ease;
+}
+@media (max-width: 575.98px) {
+  .home .job-filter .tab-item span {
+    padding: 11px;
+  }
+}
+.home .job-filter .tab-item.active span {
+  background-color: var(--white-color);
+}
+.home .job-filter .tab-content {
+  margin-top: 30px;
+}
+.home .job-filter .tab-pane {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home .job-filter .tab-pane.active {
+  display: flex;
+  gap: 24px;
+}
+.home .job-filter .tab-pane__left {
+  gap: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 60%;
+}
+@media (max-width: 1279.98px) {
+  .home .job-filter .tab-pane__left {
+    width: 100%;
+    gap: 8px;
+  }
+}
+.home .job-filter .tab-pane__left a {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 24px 24px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
+  flex: 1;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  min-width: 114px;
+}
+@media (max-width: 1279.98px) {
+  .home .job-filter .tab-pane__left a {
+    padding: 14px 8px;
+    font-size: 1.4rem;
+    min-width: auto;
+  }
+}
+.home .job-filter .tab-pane__left a .top-icon {
+  width: 20px;
+  height: 25px;
+  object-fit: contain;
+}
+.home .job-filter .tab-pane__left a .bot-icon {
+  margin-top: auto;
+}
+.home .job-filter .tab-pane__left a .circle-icon {
+  width: 16px;
+}
+.home .job-filter .tab-pane__left a .number {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.home .job-filter .tab-pane__right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1279.98px) {
+  .home .job-filter .tab-pane__right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+.home .job-filter .tab-pane__right-info {
+  font-size: 1.4rem;
+}
+@media (max-width: 575.98px) {
+  .home .job-filter .tab-pane__right-info {
+    font-size: 1.2rem;
+  }
+}
+.home .job-filter .tab-pane__right-info span {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+.home .job-filter .tab-pane__right .note {
+  color: var(--primary-2-color);
+  text-align: right;
+}
+.home .job-filter .tab-pane__right .filter-submit-btn {
+  color: var(--white-color);
+  padding: 20px 24px;
+  background-color: var(--primary-color);
+  font-size: 1.6rem;
+}
+@media (max-width: 575.98px) {
+  .home .job-filter .tab-pane__right .filter-submit-btn {
+    font-size: 1.4rem;
   }
 }
 

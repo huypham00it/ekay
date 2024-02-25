@@ -1,78 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>医師の転職ならイシモ転職</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>医師の転職ならイシモ転職</title>
 
-        <!-- Favicon -->
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./assets/favicon/apple-touch-icon.png"
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+
+  <body class="home">
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header.html");
+    </script>
+
+    <!-- Banner -->
+    <section class="banner">
+      <div class="container">
+        <div>
+          <h1 class="home-heading">患者に寄り添うあなたに寄り添う</h1>
+          <h2 class="home-sub-heading">
+            医師の転職なら <span>イシモ転職</span>
+          </h2>
+        </div>
+
+        <div class="banner-content">
+          <p class="banner-content__text">
+            求人数 <span class="number">3,000</span><span>件</span>
+            <span class="date">10月16日更新</span>
+          </p>
+
+          <div class="banner-content__actions">
+            <button class="btn btn--block btn--primary btn--large">
+              <span>会員登録</span
+              ><span class="btn btn--rounded register-tag">無料</span>
+            </button>
+            <button class="btn btn--block btn--no-margin btn--large login-btn">
+              ログイン
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job searching -->
+    <section class="job-filter">
+      <h2 class="container job-filter__heading">
+        <img
+          src="./assets/icons/search-blue.svg"
+          alt="search icon"
+          class="icon"
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+        <span>求人を探す</span>
+      </h2>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+      <!-- Tab items -->
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./assets/css/main.css" />
+      <div class="tabs-wrapper">
+        <div class="container">
+          <ul class="row row-cols-3 tabs">
+            <li class="col tab-item active">
+              <span> 常勤 </span>
+            </li>
+            <li class="col tab-item">
+              <span> 非常勤 </span>
+            </li>
+            <li class="col tab-item">
+              <span> スポット </span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <!-- Scripts -->
-        <script src="./assets/js/scripts.js"></script>
-    </head>
+      <!-- Tab content -->
+      <div class="container tab-content">
+        <div class="tab-pane active">
+          <div class="tab-pane__left">
+            <a href="/">
+              <img
+                src="./assets/icons/bag-plus-blue.svg"
+                alt="icon bag plus"
+                class="icon top-icon"
+              />
+              <span>診療科目</span>
+              <span class="number">
+                <img
+                  src="./assets/icons/check-circle-blue.svg"
+                  alt="icon check circle"
+                  class="icon circle-icon"
+                />
+                3
+              </span>
+              <img
+                src="./assets/icons/chevron-dow-grey.svg"
+                alt="icon bag plus"
+                class="icon bot-icon"
+              />
+            </a>
 
-    <body class="home">
-        <!-- Header -->
-        <header id="header" class="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
+            <a href="/">
+              <img
+                src="./assets/icons/location-dot-blue.svg"
+                alt="icon location dot"
+                class="icon top-icon"
+              />
+              <span>都道府県</span>
+              <span class="number">
+                <img
+                  src="./assets/icons/check-circle.svg"
+                  alt="icon check circle"
+                  class="icon circle-icon"
+                />
+                0
+              </span>
+              <img
+                src="./assets/icons/chevron-dow-grey.svg"
+                alt="icon bag plus"
+                class="icon bot-icon"
+              />
+            </a>
 
-        <!-- Banner -->
-        <section class="banner">
-            <div class="container">
-                <div>
-                    <h1 class="home-heading">患者に寄り添うあなたに寄り添う</h1>
-                    <h2 class="home-sub-heading">医師の転職なら <span>イシモ転職</span></h2>
-                </div>
-
-                <div class="banner-content">
-                    <p class="banner-content__text">
-                        求人数 <span class="number">3,000</span><span>件</span>
-                        <span class="date">10月16日更新</span>
-                    </p>
-
-                    <div class="banner-content__actions">
-                        <button class="btn btn--block btn--primary btn--large">
-                            <span>会員登録</span
-                            ><span class="btn btn--rounded register-tag"
-                                >無料</span
-                            >
-                        </button>
-                        <button
-                            class="btn btn--block btn--no-margin btn--large login-btn"
-                        >
-                            ログイン
-                        </button>
-                    </div>
-                </div>
+            <a href="/">
+              <img
+                src="./assets/icons/dot-bars-blue.svg"
+                alt="icon dot bars"
+                class="icon top-icon"
+              />
+              <span>詳細条件</span>
+              <span class="number">
+                <img
+                  src="./assets/icons/check-circle.svg"
+                  alt="icon check circle"
+                  class="icon circle-icon"
+                />
+                0
+              </span>
+              <img
+                src="./assets/icons/chevron-dow-grey.svg"
+                alt="icon bag plus"
+                class="icon bot-icon"
+              />
+            </a>
+          </div>
+          <div class="tab-pane__right">
+            <div class="tab-pane__right-info">
+              <p>
+                該当求人数
+                <span>2673</span>
+                件
+              </p>
+              <p class="note">条件をクリアする</p>
             </div>
-        </section>
-    </body>
+            <button class="btn filter-submit-btn">
+              選択した条件で検索する
+            </button>
+          </div>
+        </div>
+
+        <div class="tab-pane">
+            <div class="tab-pane__left">
+              <a href="/">
+                <img
+                  src="./assets/icons/bag-plus-blue.svg"
+                  alt="icon bag plus"
+                  class="icon top-icon"
+                />
+                <span>診療科目</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle-blue.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  3
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+  
+              <a href="/">
+                <img
+                  src="./assets/icons/location-dot-blue.svg"
+                  alt="icon location dot"
+                  class="icon top-icon"
+                />
+                <span>都道府県</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  0
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+  
+              <a href="/">
+                <img
+                  src="./assets/icons/dot-bars-blue.svg"
+                  alt="icon dot bars"
+                  class="icon top-icon"
+                />
+                <span>詳細条件</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  0
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+            </div>
+            <div class="tab-pane__right">
+              <div class="tab-pane__right-info">
+                <p>
+                  該当求人数
+                  <span>2673</span>
+                  件
+                </p>
+                <p class="note">条件をクリアする</p>
+              </div>
+              <button class="btn filter-submit-btn">
+                選択した条件で検索する
+              </button>
+            </div>
+          </div>
+
+          <div class="tab-pane">
+            <div class="tab-pane__left">
+              <a href="/">
+                <img
+                  src="./assets/icons/bag-plus-blue.svg"
+                  alt="icon bag plus"
+                  class="icon top-icon"
+                />
+                <span>診療科目</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle-blue.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  3
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+  
+              <a href="/">
+                <img
+                  src="./assets/icons/location-dot-blue.svg"
+                  alt="icon location dot"
+                  class="icon top-icon"
+                />
+                <span>都道府県</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  0
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+  
+              <a href="/">
+                <img
+                  src="./assets/icons/dot-bars-blue.svg"
+                  alt="icon dot bars"
+                  class="icon top-icon"
+                />
+                <span>詳細条件</span>
+                <span class="number">
+                  <img
+                    src="./assets/icons/check-circle.svg"
+                    alt="icon check circle"
+                    class="icon circle-icon"
+                  />
+                  0
+                </span>
+                <img
+                  src="./assets/icons/chevron-dow-grey.svg"
+                  alt="icon bag plus"
+                  class="icon bot-icon"
+                />
+              </a>
+            </div>
+            <div class="tab-pane__right">
+              <div class="tab-pane__right-info">
+                <p>
+                  該当求人数
+                  <span>2673</span>
+                  件
+                </p>
+                <p class="note">条件をクリアする</p>
+              </div>
+              <button class="btn filter-submit-btn">
+                選択した条件で検索する
+              </button>
+            </div>
+          </div>
+      </div>
+    </section>
+  </body>
 </html>

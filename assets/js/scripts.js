@@ -102,3 +102,36 @@ function initJsToggle() {
         };
     });
 }
+
+/**
+ * Function to init tabs
+ */
+window.addEventListener("template-loaded", initTabs);
+
+function initTabs(){
+    const tabs = $$(".tab-item");
+    const panes = $$(".tab-pane");
+    
+    const tabActive = $(".tab-item.active");
+    const tabsWrapper = $(".tabs");
+    
+    requestIdleCallback(function () {
+        tabsWrapper.style.setProperty("--line-tab-offset", tabActive.offsetLeft + "px")
+        tabsWrapper.style.setProperty("--line-tab-width", tabActive.offsetWidth + "px")
+    });
+    
+    tabs.forEach((tab, index) => {
+      const pane = panes[index];
+    
+      tab.onclick = function () {
+        $(".tab-item.active").classList.remove("active");
+        $(".tab-pane.active").classList.remove("active");
+    
+        tabsWrapper.style.setProperty("--line-tab-offset", this.offsetLeft + "px");
+        tabsWrapper.style.setProperty("--line-tab-width",this.offsetWidth + "px");
+    
+        this.classList.add("active");
+        pane.classList.add("active");
+      };
+    });
+}

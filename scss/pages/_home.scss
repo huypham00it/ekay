@@ -1,114 +1,290 @@
 @use "../abstracts";
 
 .home {
-    .banner {
-        padding: 64px 0 24px;
-        background: url(../../assets/img/home-banner-bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+  .banner {
+    padding: 64px 0 24px;
+    background: url(../../assets/img/home-banner-bg.png) var(--white-color);
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        @include abstracts.screen(sm){
-            background-size: 180%;
-            background-position: right top;
-        }
-
-        .banner-content {
-            background-color: rgba(255, 255, 255, 0.546);
-            border-radius: 6px;
-            padding: 8px 20px 16px;
-            border-radius: 6px;
-            text-align: center;
-            max-width: 360px;
-            width: 100%;
-
-            @include abstracts.screen(sm){
-                background-color: rgba(255, 255, 255, 0.6);
-                max-width: 100%;
-            }
-
-            button + button {
-                margin-top: 8px;
-            }
-
-            .register-tag {
-                background-color: var(--white-color);
-                color: #f6552d;
-            }
-
-        }
-
-        &-content {
-
-            .number {
-                font-size: 2.2rem;
-                color: var(--secondary-color);
-                font-weight: bold;
-                margin-right: 4px;
-            }
-
-            .date {
-                font-size: 1.1rem;
-            }
-
-            &__actions {
-                margin-top: 6px;
-
-                .login-btn {
-                    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
-                }
-            }
-        }
+    @include abstracts.screen(sm) {
+      background-size: 180%;
+      background-position: right top;
     }
 
-    &-heading {
-        font-size: 2.8rem;
-        color: var(--primary-color);
-        font-weight: 600;
-        text-shadow: #F4FDFF 1px 0 10px;
-        position: relative;
-        z-index: 2;
+    .banner-content {
+      background-color: rgba(255, 255, 255, 0.546);
+      border-radius: 6px;
+      padding: 8px 20px 16px;
+      border-radius: 6px;
+      text-align: center;
+      max-width: 360px;
+      width: 100%;
 
+      @include abstracts.screen(sm) {
+        background-color: rgba(255, 255, 255, 0.6);
+        max-width: 100%;
+      }
 
-        @include abstracts.screen(sm){
-            font-size: 1.4rem;
-        }
+      button + button {
+        margin-top: 8px;
+      }
+
+      .register-tag {
+        background-color: var(--white-color);
+        color: #f6552d;
+      }
     }
 
-    &-sub-heading {
-        font-size: 2rem;
-        color: var(--primary-color);
-        font-weight: 700;
-        margin: 18px 0 20px;
-        line-height: 1;
-        
-        
-        @include abstracts.screen(sm){
-            position: relative;
-            font-size: 1rem;
-            z-index: 1;
-            width: fit-content;
+    &-content {
+      .number {
+        font-size: 2.2rem;
+        color: var(--secondary-color);
+        font-weight: bold;
+        margin-right: 4px;
+      }
 
-            &::after {
-                content: "";
-                position: absolute;
-                background-color: #f4fdff;
-                width: 119px;
-                height: 119px;
-                border-radius: 999999px;
-                opacity: .8;
-                top: -70px;
-                right: -20px;
-                z-index: -1;
-                filter: blur(10px);
-            }
+      .date {
+        font-size: 1.1rem;
+      }
+
+      &__actions {
+        margin-top: 6px;
+
+        .login-btn {
+          box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
         }
+      }
+    }
+  }
 
+  &-heading {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-shadow: #f4fdff 1px 0 10px;
+    position: relative;
+    z-index: 2;
+
+    @include abstracts.screen(sm) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-sub-heading {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 18px 0 20px;
+    line-height: 1;
+
+    @include abstracts.screen(sm) {
+      position: relative;
+      font-size: 1rem;
+      z-index: 1;
+      width: fit-content;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #f4fdff;
+        width: 119px;
+        height: 119px;
+        border-radius: 999999px;
+        opacity: 0.8;
+        top: -70px;
+        right: -20px;
+        z-index: -1;
+        filter: blur(10px);
+      }
+    }
+
+    span {
+      font-size: 5.2rem;
+
+      @include abstracts.screen(sm) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .job-filter {
+    padding-top: 24px;
+    padding-bottom: 30px;
+    background-color: var(--white-color);
+
+    &__heading {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--primary-color);
+      margin-bottom: 12px;
+
+      img {
+        width: 20px;
+      }
+    }
+
+    .tabs-wrapper {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .tabs {
+      --grid-gutter-x: 5px;
+      position: relative;
+      margin: 0 auto;
+
+      @include abstracts.screen(sm) {
+        --grid-gutter-x: 2px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: var(--line-tab-offset, 0);
+        bottom: 0;
+        width: var(--line-tab-width, 0);
+        height: 3px;
+        background-color: var(--primary-color);
+        transition: all 0.2s ease;
+      }
+    }
+
+    .tab-item {
+      text-align: center;
+      font-size: 1.6rem;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.4rem;
+      }
+
+      span {
+        display: block;
+        padding: 14px;
+        background-color: var(--grey-1-color);
+        transition: all 0.2s ease;
+
+        @include abstracts.screen(sm) {
+          padding: 11px;
+        }
+      }
+
+      &.active {
         span {
-            font-size: 5.2rem;
-
-            @include abstracts.screen(sm){
-                font-size: 2.4rem;
-            }
+          background-color: var(--white-color);
         }
+      }
     }
+
+    .tab-content {
+      margin-top: 30px;
+    }
+
+    .tab-pane {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &.active {
+        display: flex;
+        gap: 24px;
+      }
+
+      &__left {
+        gap: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 60%;
+
+        @include abstracts.screen(xl) {
+          width: 100%;
+          gap: 8px;
+        }
+
+        a {
+          display: inline-flex;
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;
+          padding: 24px 24px 16px;
+          border: 1px solid var(--border-color);
+          border-radius: 4px;
+          box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
+          flex: 1;
+          font-size: 1.6rem;
+          color: var(--primary-color);
+          min-width: 114px;
+
+          @include abstracts.screen(xl) {
+            padding: 14px 8px;
+            font-size: 1.4rem;
+            min-width: auto;
+          }
+
+          .top-icon {
+            width: 20px;
+            height: 25px;
+            object-fit: contain;
+          }
+
+          .bot-icon {
+            margin-top: auto;
+          }
+
+          .circle-icon {
+            width: 16px;
+          }
+
+          .number {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.screen(xl) {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        &-info {
+          font-size: 1.4rem;
+
+          @include abstracts.screen(sm) {
+            font-size: 1.2rem;
+          }
+
+          span {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+          }
+        }
+
+        .note {
+          color: var(--primary-2-color);
+          text-align: right;
+        }
+
+        .filter-submit-btn {
+          color: var(--white-color);
+          padding: 20px 24px;
+          background-color: var(--primary-color);
+          font-size: 1.6rem;
+
+          @include abstracts.screen(sm) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
 }
