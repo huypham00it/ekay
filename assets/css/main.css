@@ -1874,6 +1874,9 @@ header {
   text-align: center;
   font-size: 1.6rem;
 }
+.home .job-filter .tab-item:hover {
+  cursor: pointer;
+}
 @media (max-width: 575.98px) {
   .home .job-filter .tab-item {
     font-size: 1.4rem;
@@ -1992,6 +1995,111 @@ header {
   .home .job-filter .tab-pane__right .filter-submit-btn {
     font-size: 1.4rem;
   }
+}
+.home .services {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.home .services__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.home .services__heading h3 {
+  font-size: 2.7rem;
+}
+@media (max-width: 575.98px) {
+  .home .services__heading h3 {
+    font-size: 1.6rem;
+  }
+}
+.home .services__heading .number {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-weight: bold;
+}
+@media (max-width: 575.98px) {
+  .home .services__heading .number {
+    font-size: 2.2rem;
+  }
+}
+.home .services__heading .unit {
+  font-size: 2rem;
+}
+@media (max-width: 575.98px) {
+  .home .services__heading .unit {
+    font-size: 1.3rem;
+  }
+}
+.home .services__heading-link {
+  color: var(--primary-2-color);
+  font-size: 1.4rem;
+}
+@media (max-width: 575.98px) {
+  .home .services__heading-link {
+    font-size: 1.2rem;
+  }
+}
+.home .sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.home .recommended {
+  /* custom for carousel */
+}
+.home .recommended .recommended-list__item {
+  border-radius: 4px;
+  box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
+  background-color: var(--white-color);
+  width: 100%;
+}
+.home .recommended-item__top {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  padding: 20px 20px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.home .recommended .recommended-item__content {
+  padding: 20px;
+}
+.home .recommended .recommended-item__content li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.home .recommended .recommended-item__content li + li {
+  margin-top: 3px;
+}
+.home .recommended .recommended-item__content span {
+  display: inline-block;
+}
+.home .recommended .recommended-item__content-label {
+  padding: 4px 16px;
+  background-color: #f0f0f0;
+  font-size: 1.2rem;
+  min-width: 80px;
+}
+.home .recommended .flickity-button {
+  display: none;
+}
+.home .recommended .carousel-cell {
+  margin-right: 20px;
+  width: 33%;
+}
+@media (max-width: 767.98px) {
+  .home .recommended .carousel-cell {
+    width: 60%;
+  }
+}
+@media (max-width: 575.98px) {
+  .home .recommended .carousel-cell {
+    width: 80%;
+  }
+}
+.home .recommended .carousel-cell:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

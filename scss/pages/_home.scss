@@ -1,6 +1,7 @@
 @use "../abstracts";
 
 .home {
+  // Banner
   .banner {
     padding: 64px 0 24px;
     background: url(../../assets/img/home-banner-bg.png) var(--white-color);
@@ -108,6 +109,7 @@
     }
   }
 
+  // Job filter
   .job-filter {
     padding-top: 24px;
     padding-bottom: 30px;
@@ -155,6 +157,10 @@
     .tab-item {
       text-align: center;
       font-size: 1.6rem;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       @include abstracts.screen(sm) {
         font-size: 1.4rem;
@@ -286,5 +292,127 @@
         }
       }
     }
+  }
+
+  // Services
+  .services {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .services__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h3 {
+      font-size: 2.7rem;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .number {
+      color: var(--secondary-color);
+      font-size: 3rem;
+      font-weight: bold;
+
+      @include abstracts.screen(sm) {
+        font-size: 2.2rem;
+      }
+    }
+
+    .unit {
+      font-size: 2rem;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-link {
+      color: var(--primary-2-color);
+      font-size: 1.4rem;
+
+      @include abstracts.screen(sm) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  // Recommended
+  .recommended {
+    .recommended-list {
+
+
+      &__item {
+        border-radius: 4px;
+        box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
+        background-color: var(--white-color);
+        width: 100%;
+      }
+    }
+
+    &-item__top {
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      padding: 20px 20px 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .recommended-item__content {
+      padding: 20px;
+
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      li + li {
+        margin-top: 3px;
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      &-label {
+        padding: 4px 16px;
+        background-color: #f0f0f0;
+        font-size: 1.2rem;
+        min-width: 80px;
+      }
+    }
+
+    /* custom for carousel */
+    .flickity-button {
+      display: none;
+    }
+
+    .carousel-cell {
+        margin-right: 20px;
+        width: 33%;
+
+        @include abstracts.screen(md) {
+            width: 60%;
+          }
+
+        @include abstracts.screen(sm) {
+            width: 80%;
+          }
+      }
+      
+      .carousel-cell:last-child {
+        margin-right: 0;
+      }
   }
 }
