@@ -2177,5 +2177,33 @@ header {
 .home .popular-feature__item-arrow {
   margin-left: auto;
 }
+.home .recent-jobs__items {
+  background-color: var(--white-color);
+  border-radius: 4px;
+}
+.home .recent-jobs__items-link {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 48px;
+}
+.home .recent-jobs__items-link .job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 48px;
+}
+.home .recent-jobs__items-link:not(:first-child) {
+  border-top: 1px solid var(--border-color);
+}
+.home .recent-jobs__items-link .title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+.home .recent-jobs__items-link .salary {
+  font-size: 1.3rem;
+}
+.home .recent-jobs__items-link .arrow {
+  margin-left: auto;
+}
 
 /*# sourceMappingURL=main.css.map */
