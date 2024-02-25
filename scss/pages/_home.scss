@@ -655,4 +655,47 @@
       margin-top: 1px;
     }
   }
+
+  // Registration
+  .registration {
+    padding: 60px 0;
+    background-color: #2E547E;
+
+    @include abstracts.screen(sm) {
+      padding: 25px 0;
+    }
+
+    &-info {
+      margin: 15px 0 29px;
+      text-align: center;
+      color: var(--white-color);
+
+      @include abstracts.screen(sm) {
+        margin: 13px 0 17px;
+      }
+    }
+
+    &-button {
+      color: var(--white-color);
+      padding: 10px;
+    }
+
+    button {
+      height: 100%;
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.17);
+
+      .register-tag {
+        color: var(--secondary-color);
+      }
+    }
+
+    &-buttons {
+      --grid-gutter-x: 20px;
+
+      @include abstracts.screen(sm) {
+        --grid-gutter-y: 8px;
+      }
+    }
+
+  }
 }

@@ -1628,6 +1628,9 @@ header {
   color: var(--white-color);
   background: #ff552c;
 }
+.btn--style-1 {
+  background: #103965;
+}
 .btn--outline {
   background: transparent;
   border: 1px solid #d2d1d6;
@@ -2334,6 +2337,44 @@ header {
 }
 .home .jobs-references .content + .label {
   margin-top: 1px;
+}
+.home .registration {
+  padding: 60px 0;
+  background-color: #2E547E;
+}
+@media (max-width: 575.98px) {
+  .home .registration {
+    padding: 25px 0;
+  }
+}
+.home .registration-info {
+  margin: 15px 0 29px;
+  text-align: center;
+  color: var(--white-color);
+}
+@media (max-width: 575.98px) {
+  .home .registration-info {
+    margin: 13px 0 17px;
+  }
+}
+.home .registration-button {
+  color: var(--white-color);
+  padding: 10px;
+}
+.home .registration button {
+  height: 100%;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.17);
+}
+.home .registration button .register-tag {
+  color: var(--secondary-color);
+}
+.home .registration-buttons {
+  --grid-gutter-x: 20px;
+}
+@media (max-width: 575.98px) {
+  .home .registration-buttons {
+    --grid-gutter-y: 8px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
