@@ -794,4 +794,127 @@
       }
     }
   }
+
+  //Notice and QnA
+  .sections-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-item {
+      background-color: var(--white-color);
+      padding: 40px 0;
+      
+      @include abstracts.screen(sm) {
+        padding: 25px 0;
+      }
+    }
+    
+    .section-inner {
+      --grid-gutter-x: 70px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: var(--border-color);
+
+        @include abstracts.screen(xl) {
+          display: none;
+        }
+      }
+    }
+
+    .section-heading {
+      @include abstracts.screen(xl) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+
+        @include abstracts.screen(xl) {
+          font-size: 1.4rem;
+          order: 1;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        @include abstracts.screen(xl) {
+          font-size: 1.2rem;
+          order: 3;
+        }
+      }
+
+      a {
+        @include abstracts.screen(xl) {
+          font-size: 1rem;
+          order: 2;
+        }
+      }
+    }
+
+    .section-content {
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        &-text {
+          align-self: flex-start;
+
+          h3 {
+            margin-top: 16px;
+            font-size: 1.7rem;
+
+            @include abstracts.screen(xl) {
+              font-size: 1.5rem;
+              margin-top: 10px;
+            }
+          }
+
+          p {
+            margin-top: 12px;
+            @include abstracts.screen(xl) {
+              margin-top: 8px;
+            }
+          }
+        }
+
+        .tag {
+          color: var(--primary-color);
+          padding-left: 12px;
+          padding-right: 12px;
+          margin-right: 8px;
+          border: 1px solid var(--primary-color);
+          border-radius: 2px;
+        }
+
+        .date {
+          color: #aaaaaa;
+        }
+
+        &-image img{
+          @include abstracts.screen(xl) {
+            max-width: 120px;
+          }
+        }
+      }
+
+      &__item + .section-content__item {
+        border-top: 1px solid var(--border-color);
+      }
+    }
+  }
 }
