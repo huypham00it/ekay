@@ -1,0 +1,297 @@
+<nav>
+    <!-- Top bar -->
+    <div class="container-fluid top-bar">
+        <div>
+            <p>医師の求人・転職・募集ならイシモ転職</p>
+            <img src="./assets/icons/logo.svg" alt="logo" class="icon logo" />
+        </div>
+
+        <!-- Top bar content desktop-->
+        <div class="top-bar-desktop">
+            <div class="top-bar__info">
+                <a href="/">お知らせ</a>
+                <a href="/">医療機関の方へ</a>
+            </div>
+            <ul class="top-bar__links">
+                <li>
+                    <a class="top-bar__links-item" href="/">常勤求人検索</a>
+                </li>
+                <li>
+                    <a class="top-bar__links-item" href="/">非常勤求人検索</a>
+                </li>
+                <li>
+                    <a class="top-bar__links-item" href="/">スポット求人検索</a>
+                </li>
+                <li>
+                    <a class="top-bar__links-item" href="/">お役立ち情報</a>
+                    <div class="dropdown-list">
+                        <ul>
+                            <li>
+                                <a href="/"
+                                    >転職までの流れ
+                                    <img
+                                        src="./assets/icons/chevron-right.svg"
+                                        alt="icon right"
+                                        class="icon dropdown-list__right-icon"
+                                /></a>
+                            </li>
+
+                            <li>
+                                <a href="/"
+                                    >お役立ちコンテンツ
+                                    <img
+                                        src="./assets/icons/chevron-right.svg"
+                                        alt="icon right"
+                                        class="icon dropdown-list__right-icon"
+                                /></a>
+                            </li>
+
+                            <li>
+                                <a href="/"
+                                    >よくある質問
+                                    <img
+                                        src="./assets/icons/chevron-right.svg"
+                                        alt="icon right"
+                                        class="icon dropdown-list__right-icon"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="top-bar__links-item" href="/"
+                        >最近見た求人 <span class="badge">20</span></a
+                    >
+                </li>
+                <li>
+                    <a class="top-bar__links-item" href="/"
+                        >最近検索した条件 <span class="badge">2</span></a
+                    >
+                </li>
+                <li>
+                    <button class="btn btn--text login-btn">
+                        <span>ログイン</span>
+                        <img
+                            src="./assets/icons/login.svg"
+                            alt="login icon"
+                            class="icon"
+                        />
+                    </button>
+                </li>
+
+                <li>
+                    <button class="btn btn--primary register-btn">
+                        会員登録
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Top bar content sm -->
+        <div class="top-bar-sm">
+            <button class="top-bar-sm__item login-button">
+                <img
+                    src="./assets/icons/login-blue.svg"
+                    alt="login icon"
+                    class="icon"
+                />
+                <span>ログイン</span>
+            </button>
+            <button class="top-bar-sm__item register-btn">
+                <img
+                    src="./assets/icons/bar-pencil.svg"
+                    alt="register icon"
+                    class="icon"
+                />
+                <span>会員登録</span>
+                <span class="register-btn__badge btn btn--rounded">無料</span>
+            </button>
+            <div
+                class="top-bar-sm__item js-toggle"
+                toggle-target="#mobile-menu-box"
+            >
+                <ul class="toggle-menu-button">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <span>メニュー</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menubar -->
+    <div class="mobile-menu hide" id="mobile-menu-box">
+        <div class="mobile-menu__top">
+            <div
+                class="mobile-menu__top-close js-toggle"
+                toggle-target="#mobile-menu-box"
+            >
+                <ul class="toggle-menu-button toggle-menu-button--white">
+                    <li class="line"></li>
+                    <li class="line"></li>
+                    <li class="line"></li>
+                </ul>
+                <span>CLOSE</span>
+            </div>
+
+            <div class="mobile-menu__top-buttons">
+                <button class="btn btn--block btn--primary btn--large">
+                    <span>会員登録</span
+                    ><span class="btn btn--rounded register-tag">無料</span>
+                </button>
+                <button class="btn btn--block btn--no-margin btn--large">
+                    ログイン
+                </button>
+            </div>
+
+            <div>
+                <div class="mobile-menu__heading">
+                    <img
+                        src="./assets/icons/search-white.svg"
+                        alt="search icon"
+                        class="icon"
+                    />
+                    <span>求人検索</span>
+                </div>
+                <div class="row row-col-4 work-search">
+                    <a href="/" class="col work-search__item">
+                        <span>常勤</span>
+                        <span>求人検索</span>
+                        <img
+                            src="./assets/icons/chevron-down-white.svg"
+                            alt="search icon"
+                            class="icon"
+                        />
+                    </a>
+                    <a href="/" class="col work-search__item">
+                        <span>非常勤</span>
+                        <span>求人検索</span>
+                        <img
+                            src="./assets/icons/chevron-down-white.svg"
+                            alt="search icon"
+                            class="icon"
+                        />
+                    </a>
+                    <a href="/" class="col work-search__item">
+                        <span>スポット</span>
+                        <span>求人検索</span>
+                        <img
+                            src="./assets/icons/chevron-down-white.svg"
+                            alt="search icon"
+                            class="icon"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu__bottom">
+            <div class="mobile-menu__bottom-item">
+                <div class="mobile-menu__heading">
+                    <img
+                        src="./assets/icons/clock-rotate-left-white.svg"
+                        alt="search icon"
+                        class="icon"
+                    />
+                    <span>検索閲覧履歴</span>
+                </div>
+                <ul class="mobile-menu-links">
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >最近見た求人
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >最近検索した条件
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu__bottom-item">
+                <div class="mobile-menu__heading">
+                    <img
+                        src="./assets/icons/file-white.svg"
+                        alt="file icon"
+                        class="icon"
+                    />
+                    <span>その他</span>
+                </div>
+                <ul class="mobile-menu-links">
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >転職までの流れ
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >お役立ちコンテンツ
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >よくある質問
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >お知らせ
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-links__item" href="/"
+                            >医療機関の方へ
+                            <img
+                                src="./assets/icons/chevron-right-white.svg"
+                                alt="arrow right icon"
+                                class="icon"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification bar -->
+    <div class="noti-bar">
+        <img
+            src="./assets/icons/info-outline.svg"
+            alt="info-icon"
+            class="icon"
+        />
+        <span>定期メンテナンスのお知らせ</span>
+    </div>
+</nav>

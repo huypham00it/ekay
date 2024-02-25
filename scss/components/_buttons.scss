@@ -1,0 +1,66 @@
+@use "../abstracts";
+
+// Buttons
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px 21px;
+    border-radius: 6px;
+
+    background: var(--white-color);
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    white-space: nowrap;
+    user-select: none;
+
+    + .btn {
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
+    }
+
+    &--large {
+        padding: 12px 24px;
+    }
+
+    &--text {
+        background: transparent;
+        font-weight: 400;
+    }
+
+    &--primary {
+        color: var(--white-color);
+        background: #ff552c;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &--danger {
+        color: #fff;
+        background: #ed4337;
+    }
+
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &--block {
+        width: 100%;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

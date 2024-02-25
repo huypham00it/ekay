@@ -1,0 +1,114 @@
+@use "../abstracts";
+
+.home {
+    .banner {
+        padding: 64px 0 24px;
+        background: url(../../assets/img/home-banner-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include abstracts.screen(sm){
+            background-size: 180%;
+            background-position: right top;
+        }
+
+        .banner-content {
+            background-color: rgba(255, 255, 255, 0.546);
+            border-radius: 6px;
+            padding: 8px 20px 16px;
+            border-radius: 6px;
+            text-align: center;
+            max-width: 360px;
+            width: 100%;
+
+            @include abstracts.screen(sm){
+                background-color: rgba(255, 255, 255, 0.6);
+                max-width: 100%;
+            }
+
+            button + button {
+                margin-top: 8px;
+            }
+
+            .register-tag {
+                background-color: var(--white-color);
+                color: #f6552d;
+            }
+
+        }
+
+        &-content {
+
+            .number {
+                font-size: 2.2rem;
+                color: var(--secondary-color);
+                font-weight: bold;
+                margin-right: 4px;
+            }
+
+            .date {
+                font-size: 1.1rem;
+            }
+
+            &__actions {
+                margin-top: 6px;
+
+                .login-btn {
+                    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
+                }
+            }
+        }
+    }
+
+    &-heading {
+        font-size: 2.8rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        text-shadow: #F4FDFF 1px 0 10px;
+        position: relative;
+        z-index: 2;
+
+
+        @include abstracts.screen(sm){
+            font-size: 1.4rem;
+        }
+    }
+
+    &-sub-heading {
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin: 18px 0 20px;
+        line-height: 1;
+        
+        
+        @include abstracts.screen(sm){
+            position: relative;
+            font-size: 1rem;
+            z-index: 1;
+            width: fit-content;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #f4fdff;
+                width: 119px;
+                height: 119px;
+                border-radius: 999999px;
+                opacity: .8;
+                top: -70px;
+                right: -20px;
+                z-index: -1;
+                filter: blur(10px);
+            }
+        }
+
+        span {
+            font-size: 5.2rem;
+
+            @include abstracts.screen(sm){
+                font-size: 2.4rem;
+            }
+        }
+    }
+}

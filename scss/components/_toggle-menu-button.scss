@@ -1,0 +1,44 @@
+.toggle-menu-button {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    li {
+        width: 20px;
+        height: 2px;
+        background-color: var(--text-color-main);
+    }
+
+    &--white {
+        li {
+            background-color: var(--white-color);
+        }
+    }
+}
+
+// When mobile menu showing
+.mobile-menu.show {
+    .toggle-menu-button {
+        .line {
+            transition: all 0.5s;
+
+            &:first-child {
+                rotate: 45deg;
+                transform: translate(7px, 6.5px);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                rotate: -45deg;
+                transform: translate(2px, -2px);
+            }
+        }
+    }
+}

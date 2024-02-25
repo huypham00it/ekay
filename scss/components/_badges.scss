@@ -1,0 +1,14 @@
+//Nav link badges
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--primary-2-color);
+}

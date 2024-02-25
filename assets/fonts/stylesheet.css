@@ -1,0 +1,99 @@
+/* HiraKaku */
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuStdN-W0.woff2") format("woff2"),
+        url("HiraKakuStdN-W0.woff") format("woff");
+    font-weight: 0;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W1.woff2") format("woff2"),
+        url("HiraKakuProN-W1.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W1.woff2") format("woff2"),
+        url("HiraKakuProN-W1.woff") format("woff");
+    font-weight: thin;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W2.woff2") format("woff2"),
+        url("HiraKakuProN-W2.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W3.woff2") format("woff2"),
+        url("HiraKakuProN-W3.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W4.woff2") format("woff2"),
+        url("HiraKakuProN-W4.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W5.woff2") format("woff2"),
+        url("HiraKakuProN-W5.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuProN-W6.woff2") format("woff2"),
+        url("HiraKakuProN-W6.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuStdN-W7.woff2") format("woff2"),
+        url("HiraKakuStdN-W7.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuStdN-W8.woff2") format("woff2"),
+        url("HiraKakuStdN-W8.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "HiraKaku";
+    src: url("HiraKakuStdN-W9.woff2") format("woff2"),
+        url("HiraKakuStdN-W9.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
