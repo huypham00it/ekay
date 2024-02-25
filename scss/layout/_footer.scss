@@ -1,1 +1,24 @@
 @use "../abstracts";
+
+.footer {
+    padding: 10px 20px;
+    background-color: var(--white-color);
+
+    &-inner {
+        display: flex;
+        justify-content: flex-end;
+        gap: 56px;
+        font-size: 1rem;
+        align-items: center;
+
+        @include abstracts.screen(sm){
+            font-size: 0.9rem;
+            justify-content: space-between;
+            gap: 4px;
+        }
+    }
+
+    &-image {
+        height: 62px;
+    }
+}

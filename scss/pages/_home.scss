@@ -351,8 +351,6 @@
   // Recommended
   .recommended {
     .recommended-list {
-
-
       &__item {
         border-radius: 4px;
         box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.17);
@@ -365,11 +363,19 @@
       font-size: 1.6rem;
       color: var(--primary-color);
       padding: 20px 20px 10px;
+
+      @include abstracts.screen(md) {
+        padding: 14px 14px 6px;
+      }
       border-bottom: 1px solid var(--border-color);
     }
 
     .recommended-item__content {
       padding: 20px;
+
+      @include abstracts.screen(md) {
+        padding: 14px;
+      }
 
       li {
         display: flex;
@@ -399,20 +405,20 @@
     }
 
     .carousel-cell {
-        margin-right: 20px;
-        width: 33%;
+      margin-right: 20px;
+      width: 33%;
 
-        @include abstracts.screen(md) {
-            width: 60%;
-          }
+      @include abstracts.screen(md) {
+        width: 60%;
+      }
 
-        @include abstracts.screen(sm) {
-            width: 80%;
-          }
+      @include abstracts.screen(sm) {
+        width: 80%;
       }
-      
-      .carousel-cell:last-child {
-        margin-right: 0;
-      }
+    }
+
+    .carousel-cell:last-child {
+      margin-right: 0;
+    }
   }
 }
