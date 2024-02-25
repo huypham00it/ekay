@@ -1,3 +1,3 @@
-### Dev developement
+### Developement
 
 sass scss:assets/css -w
