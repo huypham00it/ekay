@@ -1,10 +1,59 @@
 @use "../abstracts";
 
 .footer {
-    padding: 10px 20px;
-    background-color: var(--white-color);
+    &-top {
+        background-color: var(--primary-color);
+        padding: 60px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--white-color);
 
-    &-inner {
+        @include abstracts.screen(md){
+            flex-direction: column;
+            padding: 0;
+            align-items: start;
+        }
+
+        &__logo {
+            @include abstracts.screen(md){
+                padding: 30px 20px;
+            }
+        }
+
+        &__links {
+            @include abstracts.screen(md){
+                width: 100%;
+                padding: 10px 20px;
+                border-top: 1px solid var(--white-color);
+            }
+        }
+
+        ul {
+            display: flex;
+            font-size: 1.3rem;
+            gap: 28px;
+
+            @include abstracts.screen(md){
+                font-size: 10px;
+                gap: 20px;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: right;
+            margin-top: 16px;
+            @include abstracts.screen(md){
+                text-align: left;
+                margin-top: 8px;
+            }
+        }
+    }
+    
+    &-bottom {
+        padding: 10px 20px;
+        background-color: var(--white-color);
         display: flex;
         justify-content: flex-end;
         gap: 56px;
